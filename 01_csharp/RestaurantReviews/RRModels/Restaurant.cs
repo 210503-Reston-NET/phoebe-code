@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace RRModels
 {
     public class Restaurant
@@ -12,6 +13,8 @@ namespace RRModels
         public string Name { get; set; }
         public string City { get; set; }
         public string State { get; set; }
+
+        public List<Review> Reviews { get; set; }
 
         public override string ToString()
         {
