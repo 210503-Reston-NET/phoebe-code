@@ -6,6 +6,7 @@ namespace RRUI
 {
     public class MainMenu : IMenu
     {
+        private IMenu submenu;
         public void Start()
         {
             bool repeat = true;
@@ -19,39 +20,20 @@ namespace RRUI
                 switch (input)
                 {
                     case "0" : 
-                    // view a restaruant
-                        ViewRestaurant();
+                        // separate restaurant menu from main menu
+                        submenu = new RestaurantMenu();
+                        submenu.Start();
                         break;
                     case "1" :
                         Console.WriteLine("Thanks for using the system. Goodbye");
                         repeat = false;
                         break;
                     default:
-                        Console.WriteLine("Please input a valid option");
+                        Console.WriteLine("Invalid Input");
                         break;
                 }
             }
             while (repeat);
-        }
-        private void ViewRestaurant()
-        {
-            Restaurant sushiLand = new Restaurant("sushi land", "Seattle", "WA");
-            sushiLand.Reviews = new List<Review>
-            {
-                new Review{
-                    Rating = 5,
-                    Description = "best sushi"
-                },
-                new Review{
-                    Rating = 4,
-                    Description = "good sushi"
-                }
-            };
-            Console.WriteLine(sushiLand.ToString());
-            foreach (Review review in sushiLand.Reviews)
-            {
-                Console.WriteLine(review.ToString());
-            }
         }
     }
 }
