@@ -1,6 +1,8 @@
 using System;
 using RRModels;
 using System.Collections.Generic;
+using RRBL;
+using RRDL;
 
 namespace RRUI
 {
@@ -20,8 +22,8 @@ namespace RRUI
                 switch (input)
                 {
                     case "0" : 
-                        // separate restaurant menu from main menu
-                        submenu = new RestaurantMenu();
+                        //ToDo: access data from BL and DL layer
+                        submenu = new RestaurantMenu(new RestaurantBL(new RepoSC()));
                         submenu.Start();
                         break;
                     case "1" :
