@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true,
+                "instanceName": "RR"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "fang-revature-store.database.windows.net",
+            "group": "2105-may03-net-storeapp",
+            "database": "fang-revature-store/rr",
+            "username": "dbadmin",
+            "password": "Revature2021",
+            "connectString": "Server=tcp:fang-revature-store.database.windows.net,1433;Initial Catalog=rr;Persist Security Info=False;User ID=dbadmin;Password={Revature2021};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+        }
+    ]
+}

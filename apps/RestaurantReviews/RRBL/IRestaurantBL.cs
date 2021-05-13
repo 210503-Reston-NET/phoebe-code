@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using RRModels;
-namespace RRDL
+
+namespace RRBL
 {
-    public interface IRepository
+    public interface IRestaurantBL
     {
         List<Restaurant> GetAllRestaurants();
+        Restaurant AddRestaurant(Restaurant restaurant);
     }
 }

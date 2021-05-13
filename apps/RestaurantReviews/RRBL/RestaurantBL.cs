@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using RRModels;
 using RRDL;
+using System;
+
 namespace RRBL
 {
     /// <summary>
@@ -13,6 +15,15 @@ namespace RRBL
         public RestaurantBL(IRepository repo)
         {
             this._repo = repo;
+        }
+
+        public Restaurant AddRestaurant(Restaurant restaurant) {
+            // ToDo: check if restaurant already existed
+            // if (_repo.CheckRestaurant(restaurant))
+            // {
+            //     throw new Exception("Resturant is already exists");
+            // }
+            return _repo.AddRestaurant(restaurant);
         }
         public List<Restaurant> GetAllRestaurants()
         {
